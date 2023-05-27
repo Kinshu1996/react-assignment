@@ -3,10 +3,11 @@ import { motion } from 'framer-motion';
 import {AiOutlineSearch} from "react-icons/ai"
 import Table from '../../components/table/Table'
 import { Context } from '../../context/AppContext';
+import "./main.css"
 
 
 const Main = () => {
-    const {sortDataByName, sortDataByAge, query, setQuery, searchByName, showInfoBanner } = useContext(Context);
+    const {sortDataByName, sortDataByAge, query, setQuery, searchByName, showInfoBanner, backBtn } = useContext(Context);
     
     
   return (
@@ -31,6 +32,8 @@ const Main = () => {
             </div>
             {showInfoBanner && <div className='info-banner'>You are viewing filtered results!</div>}
             <Table />
+
+            <label className='back-btn' onClick={backBtn}>Back</label>
         </div>
         
     </div>

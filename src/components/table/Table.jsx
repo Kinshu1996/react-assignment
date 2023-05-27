@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
 import { Context } from '../../context/AppContext'
+import "./table.css";
 
 
 const Table = () => {
     const {data} = useContext(Context);
   return (
     <div className='table-container'>
-      <table>
+      <table >
         <thead>
             <tr>
                 <th>name</th>

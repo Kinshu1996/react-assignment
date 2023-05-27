@@ -1,0 +1,38 @@
+.table-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    
+}
+table{
+    border-collapse: collapse;
+}
+th{
+    background-color: #ffa500;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+th,td{
+    padding: 10px 74px;
+    border: 1px solid #11112f;
+}
+
+
+@media screen and (max-width: 1024px) {
+    th{
+        
+        font-size: 17px;
+        
+    }
+    th,td{
+        padding: 8px 44px;
+    }
+    
+}
+
+@media screen and (max-width: 512px) {
+    th,td{
+        padding: 5px 14px;
+    }
+}

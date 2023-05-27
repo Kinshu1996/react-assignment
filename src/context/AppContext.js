@@ -3,6 +3,7 @@
 import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react'
 
+
 export const Context = createContext();
 
 const AppContext = ({children}) => {
@@ -42,11 +43,15 @@ const AppContext = ({children}) => {
         const filterData = data.filter(value => value.name.toLowerCase().includes(query.toLowerCase()))
         console.log(filterData);
         setData(filterData);
+        
+        query !== "" && filterData === [] ? setShowInfoBanner(true): setShowInfoBanner(false);
         setQuery("");
-        setShowInfoBanner(true);
         
     }
-
+   
+    const backBtn = () => {
+        window.location.reload(false);
+    }
 
    useEffect(() => {
     fetchDataFromApi();
@@ -61,7 +66,8 @@ const AppContext = ({children}) => {
         query, 
         setQuery,
         searchByName,
-        showInfoBanner
+        showInfoBanner,
+        backBtn
     }}>
         {children}
     </Context.Provider>
