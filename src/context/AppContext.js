@@ -4,12 +4,14 @@ import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react'
 
 
+
 export const Context = createContext();
 
 const AppContext = ({children}) => {
     const[data, setData] = useState([]);
    const[query, setQuery] = useState("");
    const[showInfoBanner, setShowInfoBanner] = useState(false);
+   
    
 
    const fetchDataFromApi = async () => {
@@ -52,6 +54,9 @@ const AppContext = ({children}) => {
     const backBtn = () => {
         window.location.reload(false);
     }
+
+   
+      
 
    useEffect(() => {
     fetchDataFromApi();
