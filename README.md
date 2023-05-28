@@ -33,5 +33,6 @@ logout button showing on a navbar after successfully login when click logout but
 * use tostify for showing a error msg
 * using protected routing
 * use localstorage to store the login state
+* use media query for responsive style
 
 # Screenshot
