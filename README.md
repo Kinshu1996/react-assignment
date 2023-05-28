@@ -17,11 +17,6 @@ After click on card button inside a navbar move to card page here showing the ca
 <b>step 4: logout</b><br />
 logout button showing on a navbar after successfully login when click logout button move to login page and not accesable to home and card page .
 
-#Demo video
-
-
-
-
 <br />
 
 
