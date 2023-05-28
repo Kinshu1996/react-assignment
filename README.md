@@ -36,12 +36,15 @@ logout button showing on a navbar after successfully login when click logout but
 * use media query for responsive style
 
 # Screenshot
-<br />
-![Screenshhot-1](https://github.com/Kinshu1996/react-assignment/assets/120478293/9ca45cfa-4d0b-41f3-a4d8-a9ac2e735db3)
-<br/>
-![Screenshot-2](https://github.com/Kinshu1996/react-assignment/assets/120478293/7af589c5-a833-49f8-804f-a6cefa0c12bc)
-<br />
-![Screenshot-3](https://github.com/Kinshu1996/react-assignment/assets/120478293/21913ea1-b06d-4b75-90a0-0968c2178a75)
+
+![Screenshhot-1](https://github.com/Kinshu1996/react-assignment/assets/120478293/e4e5753e-ade9-4151-8e63-42cb196ec2e5)
+
+![Screenshot-2](https://github.com/Kinshu1996/react-assignment/assets/120478293/8d1286d0-9dc4-4b5d-ba3f-b3849187678d)
+
+![Screenshot-3](https://github.com/Kinshu1996/react-assignment/assets/120478293/d1fcf277-2fed-4840-8dc2-d5a55a04546c)
+
+
+
 
 
 
