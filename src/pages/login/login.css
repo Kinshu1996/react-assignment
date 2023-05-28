@@ -1,5 +1,9 @@
 .login-container{
-    background-color: #ffa5005e;
+    /* background-color: #ffa5005e; */
+    background-image: url('../../assests/bg-img.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -39,12 +43,16 @@
     outline: none;
     padding: 5px 5px;
 }
-.login-btn{
+.login-btn button {
+    width: 100%;
+    border: none;
+    outline: none;
     border-bottom: 2px solid #06067b;
     text-align: center;
-    padding: 4px;
+    padding:  6px;
     background-color: #11112f;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 20px;
     color: #fff;
+    font-size: 16px;
 }

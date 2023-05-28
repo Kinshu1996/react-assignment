@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
 import "./login.css";
 
@@ -31,8 +31,8 @@ const Login = () => {
   const loginHandler = (e) => {
     e.preventDefault();
     if(user.email === "demo@coralmango.com" && user.password === "demo123"){
-      localStorage.setItem("isLoggedIn", true);
-        navigate('/main');
+      localStorage.setItem("login", true);
+        navigate('/');
     } else {
       toast.error('🦄 Invalid Credentials!', {
         position: "top-center",
@@ -51,6 +51,12 @@ const Login = () => {
       password: ""
     })
   } 
+  useEffect(() => {
+    let login = localStorage.getItem('login');
+    if(login){
+      navigate('/');
+    }
+  })
 
   
   return (
@@ -70,9 +76,11 @@ const Login = () => {
                 <br />
                 <input  type='password' placeholder='Enter valid password' name='password' value={user.password} onChange={inputChangeHandler} />
                 </div>
-                <motion.button whileHover={{scale: 1.1}} className='login-btn' type='submit'>
-                login
-                </motion.button>
+                <motion.div whileHover={{scale: 1.1}} className='login-btn'>
+                  <button type='submit'>
+                  login
+                  </button>
+                </motion.div>
                 
             </form>
         </div>

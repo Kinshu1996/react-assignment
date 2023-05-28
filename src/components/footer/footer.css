@@ -1,0 +1,29 @@
+.footer-section{
+    background-color: blanchedalmond;
+    padding: 15px 0px;
+}
+
+.footer-content{
+    text-align: center;
+    font-size: 18px;
+    color: #11112f;
+}
+.footer-content svg{
+    color: #11112f;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-content{
+        
+        font-size: 16px;
+        
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-content{
+        
+        font-size: 15px;
+        
+    }
+}

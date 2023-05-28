@@ -1,17 +1,20 @@
 import React, { useContext } from 'react'
 import { motion } from 'framer-motion';
-import {AiOutlineSearch} from "react-icons/ai"
+
 import Table from '../../components/table/Table'
 import { Context } from '../../context/AppContext';
 import "./main.css"
 
 
+
 const Main = () => {
-    const {sortDataByName, sortDataByAge, query, setQuery, searchByName, showInfoBanner, backBtn } = useContext(Context);
+    const {sortDataByName, sortDataByAge, showInfoBanner, backBtn } = useContext(Context);
     
     
   return (
+    <>
     <div className='home-page-container'>
+        
         <div className='table-data-container'>
             <div className='sort-container'>
                 <div className='sort'>Sort By :-</div>
@@ -24,12 +27,12 @@ const Main = () => {
                     </motion.div>
                 </div>
             </div>
-            <div className='search-container'>
+            {/* <div className='search-container'>
                 <div className='search-form' >
                     <input type='text' placeholder='search by name' value={query} onChange={(e) => setQuery(e.target.value)} />
                     <div className='search-btn' onClick={searchByName} ><AiOutlineSearch /></div>
                 </div>
-            </div>
+            </div> */}
             {showInfoBanner && <div className='info-banner'>You are viewing filtered results!</div>}
             <Table />
 
@@ -37,6 +40,8 @@ const Main = () => {
         </div>
         
     </div>
+    </>
+    
   )
 }
 

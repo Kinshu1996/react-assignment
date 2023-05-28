@@ -2,12 +2,16 @@
 
 import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 
 
 export const Context = createContext();
 
 const AppContext = ({children}) => {
+
+    const navigate = useNavigate();
+
     const[data, setData] = useState([]);
    const[query, setQuery] = useState("");
    const[showInfoBanner, setShowInfoBanner] = useState(false);
@@ -46,7 +50,7 @@ const AppContext = ({children}) => {
         console.log(filterData);
         setData(filterData);
         
-        query !== "" && filterData === [] ? setShowInfoBanner(true): setShowInfoBanner(false);
+        query !== "" && filterData.length !== 0 ? setShowInfoBanner(true): setShowInfoBanner(false);
         setQuery("");
         
     }
@@ -55,8 +59,11 @@ const AppContext = ({children}) => {
         window.location.reload(false);
     }
 
+    const handleLogout = () => {
+        localStorage.removeItem('login');    
+        navigate('/login');
+    }
    
-      
 
    useEffect(() => {
     fetchDataFromApi();
@@ -72,7 +79,8 @@ const AppContext = ({children}) => {
         setQuery,
         searchByName,
         showInfoBanner,
-        backBtn
+        backBtn,
+        handleLogout
     }}>
         {children}
     </Context.Provider>
