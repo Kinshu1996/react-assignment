@@ -1,6 +1,9 @@
 .card-section{
     background-color: #ffa5005e;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
@@ -8,7 +11,6 @@
     
     width: 70%;
     margin: auto;
-    padding: 100px 0;
 }
 
 .card-items{
@@ -21,13 +23,11 @@
     
 }
 .card-item{
-    /* border: 2px solid #fff; */
-    background-color: rgb(219, 224, 232);
+    background-color: #ededed;
     text-align: center;
     padding-bottom: 20px;   
-    border-radius: 5px;
-    box-shadow:  -5px -5px 10px #d3d3d3,
-             5px 5px 10px #ededed;
+    border-radius: 8px;
+    
 }
 .card-img{
     padding: 20px;
@@ -59,7 +59,7 @@
 
 @media screen and (max-width: 512px) {
     .card-section{
-        height: 140vh;
+        height: 100%;
         background-color: #ffa5005e;
 
     }

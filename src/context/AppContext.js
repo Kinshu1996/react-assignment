@@ -16,8 +16,6 @@ const AppContext = ({children}) => {
    const[query, setQuery] = useState("");
    const[showInfoBanner, setShowInfoBanner] = useState(false);
    
-   
-
    const fetchDataFromApi = async () => {
     await axios.get("https://coralmango.com/api/react-test").then(
         (res) => {

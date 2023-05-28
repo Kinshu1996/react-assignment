@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import {AiOutlineSearch} from "react-icons/ai"
 import "./header.css";
 import { Context } from '../../context/AppContext';
@@ -25,10 +25,10 @@ const Header = () => {
             </Link>
             
         </ul>
-        <div className='search-bar'>
+        {login ? <div className='search-bar'>
             <input type='text' placeholder='search by name' value={query} onChange={(e) => setQuery(e.target.value)} />
            <div className='search-btn' onClick={searchByName} ><AiOutlineSearch /></div>
-        </div>
+        </div> : ""}
         {login && <div className='logout-btn' onClick={handleLogout}>
             Logout
         </div> }

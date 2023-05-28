@@ -1,5 +1,4 @@
-import { Navigate, Outlet, Route, Routes } from 'react-router-dom';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
 import Main from './pages/main/Main';
 import Login from './pages/login/Login';
 import Card from './pages/card/Card';
